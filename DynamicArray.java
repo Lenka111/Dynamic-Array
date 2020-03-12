@@ -45,11 +45,11 @@ public DynamicArray(int initialCapacity){
 
     }
     public void addElement(int value){
-    //resize if the size equals the capacity
+    //resize if the size equals the capacity(array is full)
     if(size==initialCapacity){
         resize();
     }
-    //
+    //value will be stored at the next available index
     array[size] = value;
     size++;
         System.out.println("New element added: " + value);
