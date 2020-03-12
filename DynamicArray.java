@@ -3,17 +3,24 @@ import java.util.Arrays;
 
 public class DynamicArray
 {
+//instance fields
 private  int[] array;
+    
+// size = how many elements are in the array
 private  int size;
+    
+//how many elements the array can hold(length)
 private  int initialCapacity;
 
-//constructor
+//constructor with initial capacity as a parameter
 public DynamicArray(int initialCapacity){
     this.initialCapacity=initialCapacity;
+    
+    //setting the size of the array
     this.array=new int[initialCapacity];
 }
 
-
+    //get the size of the array
     public int getSize() {
         return size;
     }
@@ -38,9 +45,11 @@ public DynamicArray(int initialCapacity){
 
     }
     public void addElement(int value){
+    //resize if the size equals the capacity
     if(size==initialCapacity){
         resize();
     }
+    //
     array[size] = value;
     size++;
         System.out.println("New element added: " + value);
