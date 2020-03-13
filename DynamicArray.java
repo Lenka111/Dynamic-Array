@@ -55,6 +55,20 @@ public DynamicArray(int initialCapacity){
         System.out.println("New element added: " + value);
 
     }
+    //insert a value at a specified index
+     public void insertAtIndex(int index, int value){
+    //check if there's room for insertion
+    if(size==initialCapacity){
+        resize();
+    }
+    System.out.println("Inserted value "+ value + " at index "+ index);
+    //array at specified index = the value entered
+    array[index] = value;
+         
+    //increase size 
+    size++;
+
+    }
 
     public void displayArray(){
 
