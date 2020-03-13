@@ -24,6 +24,10 @@ public class Main {
         
          //displaying how many elements are in the array
         System.out.println("Elements in the array "+array.getSize());
+        
+        array.insertAtIndex(4,10);
+        array.displayArray();
+        System.out.println("Elements in the array "+array.getSize());
 
     }
 }
